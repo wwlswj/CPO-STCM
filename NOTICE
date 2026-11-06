@@ -1,0 +1,13 @@
+CPO-STCM
+Copyright (C) 2026 The CPO-STCM Authors
+
+This software is licensed under the GNU Affero General Public License,
+version 3 only (AGPL-3.0-only). See LICENSE for the complete license text.
+
+The optional static-evidence integration uses Ultralytics YOLO/Ultralytics
+software and model assets. Ultralytics licensing terms apply independently to
+that integration. See THIRD_PARTY_LICENSES.md and docs/licensing.md.
+
+CPO-LED Bench data is distributed separately and remains licensed under
+Creative Commons Attribution 4.0 International (CC-BY-4.0). The data license
+does not apply to this software repository.

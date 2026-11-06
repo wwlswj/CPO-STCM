@@ -1,0 +1,18 @@
+{
+  "schema": "light.project-structure.v2.template-provenance",
+  "created_at": "2026-11-06T16:05:49.368779+00:00",
+  "profile": "python-research",
+  "profile_source": "light-project-structure/references/structure-profiles.json",
+  "profile_sha256": "625f02162468eb4dc1268519617a9dc261190ec1e1db37a2252269ad2a929324",
+  "parameters": {
+    "name": "CPO-STCM"
+  },
+  "generator": "light-project-structure/scripts/scaffold.py",
+  "generator_sha256": "0ad81200c8c21b5dbd2b7d4aa900bdc193c8ab083bf5899bdcc8f29b43856a60",
+  "local_modifications": [
+    "Added src layout and package entry point",
+    "Added source, data, CLI, test, documentation, license, CI, and release metadata",
+    "Removed scaffold data and notebook placeholders where they were not deliverables"
+  ],
+  "update_support": "none; use Copier/Cruft for managed template updates"
+}

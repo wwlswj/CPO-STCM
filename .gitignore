@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.venv/
+
+# Project runtime
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+experiments/
+manifests/*
+!manifests/.gitkeep
+.tmp/
+.ultralytics/
+.matplotlib/
+
+# Models and archives
+*.pt
+*.pth
+*.onnx
+*.npy
+*.npz
+*.zip
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,103 @@
+project:
+  name: CPO-STCM
+  version: "1.0.0-rc.1"
+  random_seed: 20261103
+
+capture_profiles:
+  default: standard
+  batch_overrides:
+    "0001": profile_b_0001
+    "0002": profile_b_0002
+    "0003": profile_b_0003
+    "0005": profile_b_0005
+
+paths:
+  project_root: ".."
+  data_cache_root: "../data/raw"
+  dataset_root: "../data/raw/CPO-LED-Bench-v2.0"
+  archive_path: "../data/raw/CPO-LED-Bench-v2.0-full.zip"
+  packed_array: "../data/processed/dynamic_windows_v1.npy"
+  source_manifest: "../data/raw/CPO-LED-Bench-v2.0/manifests/cpo_stcm_samples.csv"
+  base_source_manifest: "../data/raw/original/manifests/packed_manifest_curated.csv"
+  static_image_index: "../data/raw/CPO-LED-Bench-v2.0/images/image_index.csv"
+  static_image_root: "../data/raw/CPO-LED-Bench-v2.0/images"
+  raw_detections_path: "../data/raw/CPO-LED-Bench-v2.0/evidence/raw_detections.jsonl"
+  static_calibration_path: "../data/raw/CPO-LED-Bench-v2.0/evidence/static_calibration.json"
+  static_evidence_path: "../data/raw/CPO-LED-Bench-v2.0/evidence/static_evidence.csv"
+  static_detector_weights: "../data/raw/CPO-LED-Bench-v2.0/models/static_yolo26s_v1.pt"
+  powicm_calibration: "powicm_calibration_v1.json"
+  raw_sequence_manifest: "../data/raw/original/manifests/real_sequences_curated.csv"
+  raw_charge_root: "../data/raw/original/charge"
+  manifest_root: "../manifests"
+  experiment_root: "../experiments"
+
+data:
+  input_height: 100
+  input_width: 300
+  sequence_length: 10
+  array_rows: 1
+  array_columns: 4
+  static_crop_height: 600
+  static_crop_width: 165
+  normal_calibration_fraction: 0.20
+  temporal_transforms:
+    - reverse
+    - shuffle_a
+    - shuffle_b
+    - freeze_first
+    - freeze_middle
+    - drop_one
+    - drop_three
+
+model:
+  embedding_dim: 256
+  lstm_hidden_dim: 256
+  decoder_feature_channels: 128
+  decoder_feature_height: 4
+  decoder_feature_width: 8
+  dropout: 0.10
+  mask_probability: 0.35
+  mask_max_frames: 3
+
+training:
+  batch_size: 8
+  epochs: 60
+  patience: 12
+  learning_rate: 0.0005
+  weight_decay: 0.0001
+  num_workers: 0
+  device: 0
+  loss:
+    reconstruction: 1.0
+    masked_reconstruction: 0.8
+    ssim: 0.2
+    temporal: 0.1
+    order: 0.25
+
+scoring:
+  top_k_frames: 3
+  static_detector_confidence: 0.0001
+  static_minimum_slot_confidence: 0.005
+  static_required_presence_rate: 0.85
+  target_false_positive_rates:
+    - 0.01
+    - 0.05
+  fusion_weight_grid:
+    - 0.0
+    - 0.1
+    - 0.2
+    - 0.3
+    - 0.4
+    - 0.5
+    - 0.6
+    - 0.7
+    - 0.8
+    - 0.9
+    - 1.0
+  static_frame_offsets:
+    - 0
+    - 3
+    - 6
+    - 9
+  persistent_missing_frames: 3
+

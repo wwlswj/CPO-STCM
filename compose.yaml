@@ -1,0 +1,8 @@
+services:
+  cpo-stcm:
+    build: .
+    image: cpo-stcm:1.0.0rc1
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    command: ["doctor"]

@@ -1,0 +1,101 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cpo-stcm"
+version = "1.0.0rc1"
+description = "Normal-only LED-animation anomaly detection with partially observed semantic consistency"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+authors = [
+  { name = "Xiaoxue Su", email = "xiaoxuesu@jcut.edu.cn" },
+  { name = "Wanli Wang", email = "wangwanli@jcut.edu.cn" },
+]
+maintainers = [
+  { name = "Wanli Wang", email = "wangwanli@jcut.edu.cn" },
+]
+keywords = [
+  "anomaly detection",
+  "conformal prediction",
+  "industrial inspection",
+  "LED animation",
+  "normal-only learning",
+  "temporal consistency",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=1.26",
+  "Pillow>=10",
+  "PyYAML>=6",
+  "scikit-learn>=1.3",
+  "scipy>=1.11",
+]
+
+[project.optional-dependencies]
+ml = [
+  "matplotlib>=3.7",
+  "opencv-python>=4.8",
+  "pandas>=2.0",
+  "torch>=2.2",
+]
+static = [
+  "cpo-stcm[ml]",
+  "ultralytics>=8.3",
+]
+dev = [
+  "build>=1.2",
+  "pytest>=8",
+  "ruff>=0.9",
+]
+research = [
+  "cpo-stcm[ml]",
+]
+all = [
+  "cpo-stcm[static]",
+]
+
+[project.scripts]
+cpo-stcm = "cpo_stcm.cli:main"
+
+[project.urls]
+Documentation = "https://github.com/wwlswj/CPO-STCM/tree/main/docs"
+Issues = "https://github.com/wwlswj/CPO-STCM/issues"
+Source = "https://github.com/wwlswj/CPO-STCM"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cpo_stcm = ["py.typed"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["cpo_stcm"]

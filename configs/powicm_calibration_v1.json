@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "image_height": 600,
+  "image_width": 165,
+  "slots": [
+    {
+      "slot_index": 0,
+      "slot_name": "top_arc",
+      "mean_y": 0.07488291666666666,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 3.2222286432577,
+      "target_area": 0.04122599740909091,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 1,
+      "slot_name": "lightning",
+      "mean_y": 0.15824708333333334,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 0.8888953010258898,
+      "target_area": 0.01118542486868687,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 2,
+      "slot_name": "battery_level",
+      "mean_y": 0.26658708333333336,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 1.418858973243261,
+      "target_area": 0.046643952676767686,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 3,
+      "slot_name": "top_line",
+      "mean_y": 0.3662925,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 7.222302624036985,
+      "target_area": 0.006362750045454545,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 4,
+      "slot_name": "pattern",
+      "mean_y": 0.49973083333333335,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 1.0300011195410024,
+      "target_area": 0.08918589577272727,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 5,
+      "slot_name": "bottom_line",
+      "mean_y": 0.6337124999999999,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 7.222737322681873,
+      "target_area": 0.006241453792929289,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 6,
+      "slot_name": "fuel_level",
+      "mean_y": 0.7332170833333334,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 1.4056649154392147,
+      "target_area": 0.04709786236363638,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 7,
+      "slot_name": "oil_drop",
+      "mean_y": 0.82515125,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 1.187499999999999,
+      "target_area": 0.010673670166666652,
+      "weight": 1.0,
+      "required": true
+    },
+    {
+      "slot_index": 8,
+      "slot_name": "bottom_arc",
+      "mean_y": 0.9247966666666667,
+      "sigma_y": 0.006,
+      "tolerance_y": 0.012,
+      "target_aspect": 3.249999999999992,
+      "target_area": 0.04047561878787879,
+      "weight": 1.0,
+      "required": true
+    }
+  ],
+  "confidence_floor": 0.05,
+  "max_match_cost": 2.5,
+  "order_tolerance": 0.01
+}

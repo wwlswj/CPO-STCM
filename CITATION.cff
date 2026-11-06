@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the versioned release described below."
+type: software
+title: "CPO-STCM: Normal-only LED-animation anomaly detection with partially observed semantic consistency"
+version: "1.0.0-rc.1"
+date-released: 2026-11-07
+license: AGPL-3.0-only
+repository-code: "https://github.com/wwlswj/CPO-STCM"
+url: "https://github.com/wwlswj/CPO-STCM"
+abstract: >-
+  CPO-STCM is research software for normal-only anomaly detection in
+  LED-screen animations. It combines temporal reconstruction, partially
+  observed semantic-slot consistency, and block-aware conformal calibration.
+keywords:
+  - anomaly detection
+  - conformal prediction
+  - industrial inspection
+  - LED animation
+  - normal-only learning
+  - temporal consistency
+authors:
+  - family-names: Su
+    given-names: Xiaoxue
+    email: xiaoxuesu@jcut.edu.cn
+    affiliation: >-
+      School of Artificial Intelligence, Jingchu University of Technology,
+      Jingmen 448000, China; Intelligent Information Technology Research
+      Center, Jingchu University of Technology, Jingmen 448000, China
+  - family-names: Wang
+    given-names: Wanli
+    email: wangwanli@jcut.edu.cn
+    affiliation: >-
+      School of Artificial Intelligence, Jingchu University of Technology,
+      Jingmen 448000, China; Intelligent Information Technology Research
+      Center, Jingchu University of Technology, Jingmen 448000, China

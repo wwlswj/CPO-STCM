@@ -8,8 +8,9 @@ Recorded: 2026-11-07
 |---|---:|---|
 | `cpo_stcm-1.0.0rc1-py3-none-any.whl` | 90016 | `14c495a41d40af1c2870a66ef02091839b4fe93da0a6561614eee3099a9a4548` |
 | `cpo_stcm-1.0.0rc1.tar.gz` | 74621 | `160962c1079b1c8cfc16b3830e8400903d4c34393567bc41184f69da3e9ae7ad` |
-| `CPO-STCM-v1.0.0-rc.1-source.zip` | 516033 | `c1ec3ec899ac80334c02d6011144274510319dc0a03854c29a6a6824685050f1` |
-| `CPO-STCM-v1.0.0-rc.1-release-notes.md` | 1445 | `9edf1b8ba2db738cc0721045558bdf89b096e5a2683611425049c221edd3221c` |
+
+The authoritative hashes for source archives and release-asset copies are in
+`dist/SHA256SUMS.txt`, generated after the final tag.
 
 ## Software Impacts working draft
 
@@ -27,9 +28,10 @@ Recorded: 2026-11-07
 
 ## Git preparation state
 
-- Software repository: local `main`, remote configured but not pushed.
-- Local annotated tag: `v1.0.0-rc.1` at `d9dd6fb30b9d662372480d48f3f90a4fe41faba1`.
+- Software repository: public `https://github.com/wwlswj/CPO-STCM`.
+- Annotated RC tag: `v1.0.0-rc.1`.
+- GitHub Actions: Linux Python 3.10-3.12, Windows Python 3.12, and Docker
+  smoke jobs passed.
 - Data metadata branch: `metadata/v2.0.1`.
 - Existing v2.0.0 data tag: unchanged.
-- No GitHub repository, Release, Zenodo record, DOI, or journal submission has
-  been created or modified.
+- No Zenodo record, DOI, or journal submission has been created.

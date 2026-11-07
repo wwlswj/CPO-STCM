@@ -4,8 +4,10 @@ Date: 2026-11-07
 
 Version: `1.0.0-rc.1`
 
-Repository state: local Git repository on `main`; no remote configured and no
-external publication performed.
+Repository state: public GitHub repository with a published prerelease:
+
+- https://github.com/wwlswj/CPO-STCM
+- https://github.com/wwlswj/CPO-STCM/releases/tag/v1.0.0-rc.1
 
 ## Passed in the current workspace
 
@@ -35,8 +37,9 @@ external publication performed.
   parse successfully.
 - The data metadata patch lists dataset authors in the confirmed order Wanli
   Wang, Huafeng Chen, Xian Wei.
-- A local data-repository branch prepares the v2.0.1 citation correction while
-  leaving the v2.0.0 tag and archive unchanged.
+- Data pull request https://github.com/wwlswj/CPO-LED-Bench/pull/1 prepares the
+  v2.0.1 citation correction while leaving the v2.0.0 tag and archive
+  unchanged.
 - The Software Impacts working draft contains a 90-word abstract, six keywords,
   C1-C9 metadata, impact and limitations sections, and five reference entries.
 - The working manuscript renders cleanly as a two-page A4 DOCX/PDF.
@@ -46,7 +49,8 @@ external publication performed.
 ## Open release gates
 
 - Mint and record software and dataset DOIs.
-- Apply and publish the CPO-LED Bench v2.0.1 metadata correction.
+- Merge and publish the CPO-LED Bench v2.0.1 metadata correction after DOI
+  minting.
 - Replace pending DOI and publication-status text in the manuscript after
   acceptance and archival release.
 - Perform the final live Guide for Authors and submission-system check.

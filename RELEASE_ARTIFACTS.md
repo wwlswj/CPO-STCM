@@ -30,8 +30,10 @@ The authoritative hashes for source archives and release-asset copies are in
 
 - Software repository: public `https://github.com/wwlswj/CPO-STCM`.
 - Annotated RC tag: `v1.0.0-rc.1`.
+- GitHub prerelease:
+  `https://github.com/wwlswj/CPO-STCM/releases/tag/v1.0.0-rc.1`.
 - GitHub Actions: Linux Python 3.10-3.12, Windows Python 3.12, and Docker
   smoke jobs passed.
-- Data metadata branch: `metadata/v2.0.1`.
+- Data metadata review PR: `https://github.com/wwlswj/CPO-LED-Bench/pull/1`.
 - Existing v2.0.0 data tag: unchanged.
 - No Zenodo record, DOI, or journal submission has been created.

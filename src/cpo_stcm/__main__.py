@@ -3,5 +3,4 @@
 
 from cpo_stcm.cli import main
 
-
 raise SystemExit(main())

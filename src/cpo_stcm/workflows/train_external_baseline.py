@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
+# ruff: noqa: E402
 """Train reimplemented strong normal-only baselines on UCSD Ped2."""
 
 from __future__ import annotations
@@ -8,7 +9,6 @@ import csv
 import json
 import math
 import os
-import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -36,7 +36,6 @@ sanitize_cuda_path()
 import torch
 import torch.nn.functional as functional
 from torch.utils.data import DataLoader
-
 
 from cpo_stcm.external_baselines import (
     Conv3DAutoencoder,

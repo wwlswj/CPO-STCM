@@ -9,8 +9,9 @@ import importlib.metadata
 import json
 import platform
 import sys
+from collections.abc import Callable, Sequence
 from pathlib import Path
-from typing import Any, Callable, Sequence
+from typing import Any
 
 import numpy as np
 
@@ -19,12 +20,10 @@ from cpo_stcm.data import (
     CPO_LED_ARCHIVE,
     DatasetError,
     build_packed_array,
-    extract_archive,
     fetch_cpo_led_bench,
     verify_archive,
 )
 from cpo_stcm.paths import load_project_config
-
 
 WORKFLOWS = {
     "bootstrap-external": "cpo_stcm.workflows.bootstrap_external_results",

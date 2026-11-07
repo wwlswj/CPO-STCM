@@ -7,13 +7,11 @@ import argparse
 import csv
 import hashlib
 import json
-import sys
 from pathlib import Path
 
+from cpo_stcm.paths import load_resolved_config
 
 PROJECT_ROOT = Path.cwd().resolve()
-
-from cpo_stcm.paths import load_resolved_config
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -24,7 +22,7 @@ def read_rows(path: Path) -> list[dict[str, str]]:
 
 def stable_bucket(value: str, seed: int) -> float:
     """Map a sequence ID to a stable value in [0, 1)."""
-    digest = hashlib.sha256(f"{seed}|{value}".encode("utf-8")).digest()
+    digest = hashlib.sha256(f"{seed}|{value}".encode()).digest()
     return int.from_bytes(digest[:8], "little") / 2**64
 
 

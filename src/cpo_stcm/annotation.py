@@ -7,7 +7,6 @@ import hashlib
 from collections.abc import Mapping, Sequence
 from typing import Any
 
-
 VALID_ORDER_LABELS = frozenset(
     {
         "forward_normal",
@@ -24,7 +23,7 @@ VALID_ORDER_LABELS = frozenset(
 def _stable_digest(seed: int, value: str) -> str:
     """Return a stable hexadecimal digest for deterministic sampling."""
     return hashlib.sha256(
-        f"{seed}|{value}".encode("utf-8")
+        f"{seed}|{value}".encode()
     ).hexdigest()
 
 

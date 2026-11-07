@@ -3,8 +3,8 @@
 
 from __future__ import annotations
 
+from collections.abc import Iterable, Sequence
 from dataclasses import replace
-from typing import Iterable, Sequence
 
 import numpy as np
 
@@ -17,7 +17,6 @@ from cpo_stcm.powicm_core import (
     SlotCalibration,
     detections_to_candidates,
 )
-
 
 PATTERN_SLOT_INDEX = 4
 REQUIRED_PRESENCE_RATE = 0.85
@@ -192,7 +191,7 @@ def _weighted_pava(
 ) -> np.ndarray:
     """Fit a non-decreasing sequence with weighted PAVA."""
     blocks: list[dict[str, float | int]] = []
-    for value, weight in zip(values, weights):
+    for value, weight in zip(values, weights, strict=True):
         blocks.append(
             {
                 "mean": float(value),

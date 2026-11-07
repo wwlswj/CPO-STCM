@@ -5,17 +5,15 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
-PROJECT_ROOT = Path.cwd().resolve()
-
+from cpo_stcm.paths import load_resolved_config
 from cpo_stcm.powicm_core import (
-    POWICMModel,
     SLOT_NAMES,
+    POWICMModel,
     _candidate_slots,
     load_calibration,
 )
@@ -24,7 +22,8 @@ from cpo_stcm.static_evidence import (
     detections_to_candidate_list,
     score_candidate_window,
 )
-from cpo_stcm.paths import load_resolved_config
+
+PROJECT_ROOT = Path.cwd().resolve()
 
 
 def load_jsonl(path: Path) -> dict[str, dict]:

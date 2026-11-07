@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
+# ruff: noqa: E402
 """Extract YOLO detections and adaptive PO-WICM evidence for charge windows."""
 
 from __future__ import annotations
@@ -7,7 +8,6 @@ import argparse
 import csv
 import json
 import os
-import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -35,7 +35,7 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-
+from cpo_stcm.paths import load_resolved_config
 from cpo_stcm.powicm_core import (
     POWICMModel,
     load_calibration,
@@ -49,7 +49,6 @@ from cpo_stcm.static_evidence import (
     merge_frame_observations,
     score_candidate_window,
 )
-from cpo_stcm.paths import load_resolved_config
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:
@@ -87,10 +86,11 @@ def serialize_detections(result) -> list[dict[str, object]]:
             "confidence": float(confidence),
             "box": [float(value) for value in box],
         }
-        for box, confidence, class_index in zip(
+            for box, confidence, class_index in zip(
             boxes,
             confidences,
             classes,
+                strict=True,
         )
     ]
 
@@ -227,7 +227,11 @@ def extract_window_detections(
                 "offset": offset,
                 "detections": serialize_detections(result),
             }
-            for offset, result in zip(valid_offsets, results)
+            for offset, result in zip(
+                valid_offsets,
+                results,
+                strict=True,
+            )
         ],
     }
 

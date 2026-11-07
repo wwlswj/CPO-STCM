@@ -15,7 +15,6 @@ from sklearn.metrics import (
     roc_auc_score,
 )
 
-
 PROJECT_ROOT = Path.cwd().resolve()
 
 

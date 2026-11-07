@@ -7,9 +7,9 @@ different working project.
 ## Dataset setup
 
 ```bash
-cpo-stcm data fetch
-cpo-stcm data verify
-cpo-stcm data build-packed
+uv run --frozen cpo-stcm data fetch
+uv run --frozen cpo-stcm data verify
+uv run --frozen cpo-stcm data build-packed
 ```
 
 `build-manifests` is an optional research-data workflow. It requires the
@@ -18,7 +18,7 @@ original `packed_manifest_curated.csv`, not the finalized public manifest.
 ## Temporal training
 
 ```bash
-cpo-stcm workflow train-temporal \
+uv run --frozen --extra dev --extra ml cpo-stcm workflow train-temporal \
   --category Charge \
   --variant enhanced \
   --run-name charge_enhanced_v2
@@ -27,7 +27,7 @@ cpo-stcm workflow train-temporal \
 ## Temporal inference
 
 ```bash
-cpo-stcm workflow infer-temporal \
+uv run --frozen --extra dev --extra ml cpo-stcm workflow infer-temporal \
   --checkpoint experiments/temporal_autoencoder/charge_enhanced_v2/best.pt \
   --output-dir experiments/inference/charge_enhanced_v2 \
   --category Charge \
@@ -37,7 +37,7 @@ cpo-stcm workflow infer-temporal \
 ## Evaluation
 
 ```bash
-cpo-stcm workflow evaluate-joint \
+uv run --frozen --extra dev --extra ml cpo-stcm workflow evaluate-joint \
   --enhanced-scores experiments/inference/charge_enhanced_v2/temporal_scores.csv \
   --baseline-scores experiments/inference/charge_baseline_v1/temporal_scores.csv \
   --static-evidence data/raw/CPO-LED-Bench-v2.0/evidence/static_evidence.csv \

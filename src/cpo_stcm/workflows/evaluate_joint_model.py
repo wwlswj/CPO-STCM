@@ -5,14 +5,11 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
-
-PROJECT_ROOT = Path.cwd().resolve()
 
 from cpo_stcm.evaluation import (
     anomaly_type_recall,
@@ -23,6 +20,8 @@ from cpo_stcm.evaluation import (
     grouped_bootstrap_intervals,
     select_f1_threshold,
 )
+
+PROJECT_ROOT = Path.cwd().resolve()
 
 GRID = np.round(np.linspace(0.0, 1.0, 21), 2)
 

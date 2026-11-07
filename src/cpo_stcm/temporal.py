@@ -13,7 +13,6 @@ import torch.nn as nn
 import torch.nn.functional as functional
 from torch.utils.data import Dataset
 
-
 TRANSFORM_PERMUTATIONS = {
     "shuffle_a": (0, 3, 1, 5, 2, 7, 4, 9, 6, 8),
     "shuffle_b": (9, 1, 7, 3, 5, 0, 8, 2, 6, 4),

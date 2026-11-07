@@ -7,7 +7,7 @@ name = "cpo-stcm"
 version = "1.0.0rc1"
 description = "Normal-only LED-animation anomaly detection with partially observed semantic consistency"
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.10,<3.14"
 license = "AGPL-3.0-only"
 license-files = ["LICENSE"]
 authors = [
@@ -99,3 +99,11 @@ testpaths = ["tests"]
 [tool.coverage.run]
 branch = true
 source = ["cpo_stcm"]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }

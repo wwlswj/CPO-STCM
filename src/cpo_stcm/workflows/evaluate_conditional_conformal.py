@@ -5,14 +5,11 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from sklearn.metrics import f1_score
-
-PROJECT_ROOT = Path.cwd().resolve()
 
 from cpo_stcm.conformal import (
     conditional_false_positive_rates,
@@ -22,6 +19,8 @@ from cpo_stcm.conformal import (
 )
 from cpo_stcm.evaluation import conformal_p_values
 from cpo_stcm.paths import load_resolved_config
+
+PROJECT_ROOT = Path.cwd().resolve()
 
 
 def metric_summary(

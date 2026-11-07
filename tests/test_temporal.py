@@ -11,7 +11,6 @@ from pathlib import Path
 
 import numpy as np
 
-
 if os.environ.get("CPO_STCM_SKIP_ML_TESTS") == "1":
     raise unittest.SkipTest("CPO_STCM_SKIP_ML_TESTS=1")
 

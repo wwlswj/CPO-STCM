@@ -3,8 +3,7 @@
 ## Supported baseline
 
 The primary release and clean-room test target is Python 3.12 on Linux and
-Windows. The package metadata allows Python 3.10 and newer, but a version is
-not considered release-verified until it passes CI.
+Windows. The package metadata supports Python 3.10 through 3.12.
 
 ## Base installation
 
@@ -12,10 +11,8 @@ The base installation supports configuration, conformal calibration, dataset
 verification, data packing, and the offline demo.
 
 ```bash
-python -m venv .venv
-python -m pip install --upgrade pip
-python -m pip install -e .
-cpo-stcm demo
+uv sync --frozen
+uv run --frozen cpo-stcm demo
 ```
 
 ## Neural workflow
@@ -23,7 +20,7 @@ cpo-stcm demo
 The `ml` extra adds PyTorch, OpenCV, pandas, and matplotlib:
 
 ```bash
-python -m pip install -e ".[ml]"
+uv sync --frozen --extra dev --extra ml
 ```
 
 ## Static detector workflow
@@ -31,7 +28,7 @@ python -m pip install -e ".[ml]"
 The `static` extra adds Ultralytics:
 
 ```bash
-python -m pip install -e ".[static]"
+uv sync --frozen --extra dev --extra ml --extra static
 ```
 
 This extra carries AGPL-3.0 obligations. Review
@@ -40,16 +37,16 @@ This extra carries AGPL-3.0 obligations. Review
 ## Developer tools
 
 ```bash
-python -m pip install -e ".[dev]"
-python -m unittest discover -s tests -v
-python -m compileall -q src tests
+uv sync --frozen --extra dev --extra ml
+uv run --frozen --extra dev --extra ml python -m unittest discover -s tests -v
+uv run --frozen --extra dev --extra ml ruff check src tests
 ```
 
 ## Environment diagnosis
 
 ```bash
-cpo-stcm doctor
-cpo-stcm config show
+uv run --frozen cpo-stcm doctor
+uv run --frozen cpo-stcm config show
 ```
 
 `doctor` reports installed optional packages and configured paths but does not

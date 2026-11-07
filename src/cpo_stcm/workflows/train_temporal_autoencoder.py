@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
+# ruff: noqa: E402
 """Train baseline or enhanced normal-only LSTM autoencoders."""
 
 from __future__ import annotations
@@ -43,13 +44,12 @@ import torch
 import torch.nn.functional as functional
 from torch.utils.data import DataLoader
 
-
+from cpo_stcm.paths import load_resolved_config
 from cpo_stcm.temporal import (
     LSTMSequenceAutoencoder,
     TemporalWindowDataset,
     reconstruction_objective,
 )
-from cpo_stcm.paths import load_resolved_config
 
 
 def load_config(path: Path) -> dict:

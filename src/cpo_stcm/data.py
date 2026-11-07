@@ -17,13 +17,12 @@ import shutil
 import urllib.error
 import urllib.request
 import zipfile
+from collections.abc import Callable, Iterable
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Callable, Iterable
 
 import numpy as np
 from PIL import Image
-
 
 CPO_LED_VERSION = "2.0.0"
 CPO_LED_RELEASE_TAG = "v2.0.0"

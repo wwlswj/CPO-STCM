@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
+# ruff: noqa: E402
 """Evaluate reimplemented Conv3D and memory autoencoders on UCSD Ped2."""
 
 from __future__ import annotations
@@ -6,7 +7,6 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path.cwd().resolve()
@@ -37,7 +37,6 @@ from sklearn.metrics import (
     f1_score,
     roc_auc_score,
 )
-
 
 from cpo_stcm.evaluation import (
     conformal_p_values,

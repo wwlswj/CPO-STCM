@@ -3,6 +3,6 @@
 These files record audited environments. They are not substitutes for a
 complete transitive lock generated for the final release.
 
-The release candidate still requires a lock generated from `pyproject.toml` in
-the primary Python 3.12 environment. Until that gate is complete, do not
-describe this directory as a reproducible lock set.
+`uv.lock` at the repository root is the authoritative cross-platform lock.
+`verified-py312-ml-freeze.txt` is a resolved-package snapshot from the clean
+Python 3.12.10 CPU environment used for the full test pass.

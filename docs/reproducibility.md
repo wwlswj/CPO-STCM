@@ -9,11 +9,17 @@
 - The historical research workspace records 17 passing unit tests under its
   original environment.
 
+## Verified release gates
+
+- The base suite passes in an independent Python 3.12.10 environment.
+- The full CPU ML suite passes with PyTorch 2.15.0+cpu.
+- A fresh environment resolved from `uv.lock` reproduces all 24 tests.
+- All 5,010 public windows are reconstructed from the image release.
+- Ruff, compile checks, dependency checks, and package builds pass.
+
 ## Release gates still open
 
-- Rebuild and test in a clean Python 3.12 environment.
-- Generate and archive a complete dependency lock.
-- Verify the optional PyTorch path on Linux CPU and Windows CPU.
+- Verify the optional PyTorch path through remote Linux and Windows CI.
 - Build and record an immutable container digest.
 - Compare a frozen quickstart output against an archived expected result.
 - Mint a software version DOI and a dataset DOI.

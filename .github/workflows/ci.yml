@@ -20,12 +20,15 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: pip
-      - run: python -m pip install --upgrade pip
-      - run: python -m pip install -e ".[dev]"
-      - run: python -m compileall -q src tests
-      - run: python -m unittest discover -s tests -v
-      - run: python -m pip check
-      - run: python -m build
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen --extra dev --extra ml
+      - run: uv pip check
+      - run: uv run --frozen --extra dev --extra ml ruff check src tests paper/software-impacts/build_manuscript.py
+      - run: uv run --frozen --extra dev --extra ml python -m compileall -q src tests paper/software-impacts/build_manuscript.py
+      - run: uv run --frozen --extra dev --extra ml python -m unittest discover -s tests -v
+      - run: uv run --frozen --extra dev --extra ml python -m build
 
   windows-smoke:
     runs-on: windows-latest
@@ -35,7 +38,16 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
-      - run: python -m pip install --upgrade pip
-      - run: python -m pip install -e ".[dev]"
-      - run: python -m unittest discover -s tests -v
-      - run: cpo-stcm demo
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv sync --frozen --extra dev --extra ml
+      - run: uv run --frozen --extra dev --extra ml python -m unittest discover -s tests -v
+      - run: uv run --frozen --extra dev --extra ml cpo-stcm demo
+
+  container-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t cpo-stcm:test .
+      - run: docker run --rm cpo-stcm:test demo

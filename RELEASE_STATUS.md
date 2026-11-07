@@ -19,23 +19,35 @@ external publication performed.
 - 20 selected tests pass in the current environment.
 - The complete CPO-LED archive verifies at 395,563,944 bytes and the pinned
   SHA-256.
-- Two real dynamic windows pack successfully to shape `(2, 10, 100, 300)`.
+- All 5,010 public dynamic windows pack successfully to shape
+  `(7322, 10, 100, 300)` in 2,196,600,128 bytes.
+- The full packed-array SHA-256 is
+  `58e84979e4c10e925c0577e592293730f486108a67c2693882dfa29f3f66e02b`.
+- A clean Python 3.12.10 base environment passes 24 tests with three optional
+  PyTorch tests skipped.
+- A second clean Python 3.12.10 CPU ML environment with PyTorch 2.15.0+cpu
+  passes all 24 tests.
+- A frozen environment generated from `uv.lock` passes all 24 tests.
+- `uv.lock` resolves 83 packages and pins CPU PyTorch for the reproducible
+  baseline.
+- Ruff, compileall, pip check, sdist, and wheel build gates pass.
 - Software and dataset CFF files, Zenodo JSON files, and dataset metadata JSON
   parse successfully.
 - The data metadata patch lists dataset authors in the confirmed order Wanli
   Wang, Huafeng Chen, Xian Wei.
+- A local data-repository branch prepares the v2.0.1 citation correction while
+  leaving the v2.0.0 tag and archive unchanged.
+- The Software Impacts working draft contains a 90-word abstract, six keywords,
+  C1-C9 metadata, impact and limitations sections, and five reference entries.
+- The working manuscript renders cleanly as a two-page A4 DOCX/PDF.
 
 ## Open release gates
 
-- Run the complete suite in a clean Python 3.12 environment.
-- Restore and verify the optional PyTorch path; the current Python 3.14
-  environment stalls while loading a torch DLL.
-- Run the full 5,010-window packing operation rather than only the two-window
-  smoke test.
 - Build and verify Docker/OCI images; Docker is not installed on the current
   host.
-- Generate a full transitive dependency lock.
 - Run the repository CI workflow on Linux and Windows.
 - Mint and record software and dataset DOIs.
 - Apply and publish the CPO-LED Bench v2.0.1 metadata correction.
-- Perform the final Software Impacts template and live Guide check.
+- Replace pending DOI and publication-status text in the manuscript after
+  acceptance and archival release.
+- Perform the final live Guide for Authors and submission-system check.

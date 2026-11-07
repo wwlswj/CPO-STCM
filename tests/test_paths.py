@@ -67,16 +67,18 @@ class ConfigPathTests(unittest.TestCase):
         self.assertEqual(explicit.name, "relative-root")
         temporary_root = Path(__file__).resolve().parents[1] / ".tmp"
         temporary_root.mkdir(parents=True, exist_ok=True)
-        with tempfile.TemporaryDirectory(dir=temporary_root) as directory:
-            with mock.patch.dict(
+        with (
+            tempfile.TemporaryDirectory(dir=temporary_root) as directory,
+            mock.patch.dict(
                 os.environ,
                 {"CPO_STCM_PROJECT_ROOT": directory},
-            ):
-                self.assertEqual(project_root(), Path(directory).resolve())
-                self.assertEqual(
-                    default_config_path(),
-                    Path(directory).resolve() / "configs" / "cpo_stcm.yaml",
-                )
+            ),
+        ):
+            self.assertEqual(project_root(), Path(directory).resolve())
+            self.assertEqual(
+                default_config_path(),
+                Path(directory).resolve() / "configs" / "cpo_stcm.yaml",
+            )
 
 
 if __name__ == "__main__":

@@ -7,18 +7,18 @@ import unittest
 
 import numpy as np
 
-from cpo_stcm.evaluation import (
-    binary_metrics,
-    conformal_p_values,
-    empirical_two_sided_anomaly_evidence,
-    empirical_upper_tail_anomaly_evidence,
-)
 from cpo_stcm.conformal import (
     block_conformal_p_values,
     mondrian_conformal_p_values,
     observability_stratum,
     profile_mondrian_conformal_p_values,
     source_balanced_conformal_p_values,
+)
+from cpo_stcm.evaluation import (
+    binary_metrics,
+    conformal_p_values,
+    empirical_two_sided_anomaly_evidence,
+    empirical_upper_tail_anomaly_evidence,
 )
 from cpo_stcm.static_evidence import crop_array_subimage
 

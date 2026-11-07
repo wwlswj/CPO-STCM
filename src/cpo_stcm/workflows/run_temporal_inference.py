@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
+# ruff: noqa: E402
 """Run a trained temporal autoencoder on calibration and evaluation windows."""
 
 from __future__ import annotations
@@ -37,9 +38,8 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-
-from cpo_stcm.temporal import LSTMSequenceAutoencoder, TemporalWindowDataset
 from cpo_stcm.paths import load_resolved_config
+from cpo_stcm.temporal import LSTMSequenceAutoencoder, TemporalWindowDataset
 
 
 def read_rows(path: Path) -> list[dict[str, str]]:

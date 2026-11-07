@@ -155,7 +155,7 @@ def anomaly_type_recall(
     for subclass in sorted(
         {
             str(value)
-            for value, label in zip(subclasses, labels)
+            for value, label in zip(subclasses, labels, strict=True)
             if int(label) == 1
         }
     ):
@@ -163,7 +163,7 @@ def anomaly_type_recall(
             [
                 index
                 for index, (value, label) in enumerate(
-                    zip(subclasses, labels)
+                    zip(subclasses, labels, strict=True)
                 )
                 if int(label) == 1 and str(value) == subclass
             ],

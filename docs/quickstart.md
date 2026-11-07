@@ -3,8 +3,8 @@
 ## Model-free demo
 
 ```bash
-python -m pip install -e .
-cpo-stcm demo
+uv sync --frozen
+uv run --frozen cpo-stcm demo
 ```
 
 The command constructs a deterministic normal reference sample, computes
@@ -13,9 +13,9 @@ split-conformal p-values, and reports alarms at the selected alpha.
 ## Public benchmark
 
 ```bash
-cpo-stcm data fetch
-cpo-stcm data verify
-cpo-stcm data build-packed
+uv run --frozen cpo-stcm data fetch
+uv run --frozen cpo-stcm data verify
+uv run --frozen cpo-stcm data build-packed
 ```
 
 The default locations are:
@@ -27,8 +27,9 @@ The default locations are:
 ## Train and evaluate
 
 ```bash
-python -m pip install -e ".[ml]"
-cpo-stcm workflow train-temporal --category Charge --variant baseline \
+uv sync --frozen --extra dev --extra ml
+uv run --frozen --extra dev --extra ml cpo-stcm workflow train-temporal \
+  --category Charge --variant baseline \
   --run-name charge_baseline_v1
 ```
 
@@ -39,5 +40,5 @@ base manifests are available.
 Use `--help` after a workflow name to see its original research arguments:
 
 ```bash
-cpo-stcm workflow train-temporal --help
+uv run --frozen --extra dev --extra ml cpo-stcm workflow train-temporal --help
 ```

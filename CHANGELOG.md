@@ -18,6 +18,12 @@ versioning after the first stable release.
   metadata.
 - Initial unit tests for paths, archives, CLI behavior, and existing algorithm
   primitives.
+- A complete `uv.lock` with CPU PyTorch pinned through the PyTorch CPU index.
+- Clean Python 3.12 base and CPU ML validation, plus a frozen lock-environment
+  test run.
+- Full reconstruction of 5,010 CPO-LED windows from the public image release.
+- A two-page Software Impacts working manuscript with C1-C9 metadata,
+  references, rendered DOCX, and PDF.
 
 ### Known limitations
 

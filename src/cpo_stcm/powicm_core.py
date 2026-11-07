@@ -5,12 +5,11 @@ from __future__ import annotations
 
 import json
 import math
+from collections.abc import Iterable, Sequence
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable, Sequence
 
 import numpy as np
-
 
 SLOT_NAMES = (
     "top_arc",
@@ -252,7 +251,7 @@ def _weighted_pava(
     if not values:
         raise ValueError("At least one value is required")
     blocks: list[dict[str, float | int]] = []
-    for value, weight in zip(values, weights):
+    for value, weight in zip(values, weights, strict=True):
         blocks.append(
             {
                 "mean": float(value),
@@ -488,7 +487,7 @@ class POWICMModel:
             ] = self.calibration.max_match_cost
         rows, columns = linear_sum_assignment(cost_matrix)
         matched: dict[int, SemanticCandidate] = {}
-        for row, column in zip(rows, columns):
+        for row, column in zip(rows, columns, strict=True):
             if column >= len(candidates):
                 continue
             if cost_matrix[row, column] <= self.calibration.max_match_cost:

@@ -1,4 +1,5 @@
 # SPDX-License-Identifier: AGPL-3.0-only
+# ruff: noqa: E402
 """Train CPO-STCM temporal autoencoders on an external public benchmark."""
 
 from __future__ import annotations
@@ -8,7 +9,6 @@ import csv
 import json
 import math
 import os
-import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -37,7 +37,6 @@ import torch
 import torch.nn.functional as functional
 import yaml
 from torch.utils.data import DataLoader
-
 
 from cpo_stcm.temporal import (
     LSTMSequenceAutoencoder,

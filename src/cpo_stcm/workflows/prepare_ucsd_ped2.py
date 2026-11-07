@@ -12,7 +12,6 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-
 PROJECT_ROOT = Path.cwd().resolve()
 EXTERNAL_ROOT = PROJECT_ROOT / "datasets" / "external"
 

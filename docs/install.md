@@ -5,6 +5,10 @@
 The primary release and clean-room test target is Python 3.12 on Linux and
 Windows. The package metadata supports Python 3.10 through 3.12.
 
+Python 3.14 is intentionally excluded from the release range. The original
+audit host's CUDA-enabled 3.14 environment stalled while loading a PyTorch DLL;
+the independent Python 3.12 CPU environment does not reproduce that failure.
+
 ## Base installation
 
 The base installation supports configuration, conformal calibration, dataset

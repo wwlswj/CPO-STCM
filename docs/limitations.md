@@ -13,5 +13,6 @@
   redistributed by this repository.
 - The current release candidate is not validated for safety-critical,
   zero-failure, multi-site, or commercial deployment claims.
-- The full clean-environment, locked-container, and PyTorch reproducibility
-  gates remain open until release.
+- Python 3.14 and CUDA-specific releases are outside the verified 3.10-3.12
+  CPU baseline.
+- The locked-container and remote-CI gates remain open until release.

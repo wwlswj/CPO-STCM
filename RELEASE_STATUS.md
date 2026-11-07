@@ -48,9 +48,14 @@ Repository state: public GitHub repository with a published prerelease:
 
 ## Open release gates
 
-- Mint and record software and dataset DOIs.
+- Publish Zenodo drafts and register the reserved software and dataset DOIs.
 - Merge and publish the CPO-LED Bench v2.0.1 metadata correction after DOI
   minting.
 - Replace pending DOI and publication-status text in the manuscript after
   acceptance and archival release.
 - Perform the final live Guide for Authors and submission-system check.
+
+Prepared but unpublished Zenodo drafts:
+
+- Software: https://zenodo.org/deposit/24031262
+- Dataset: https://zenodo.org/deposit/24031281

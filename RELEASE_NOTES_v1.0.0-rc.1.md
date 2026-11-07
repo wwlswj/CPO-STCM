@@ -22,14 +22,15 @@ distribution.
 - Frozen `uv.lock` environment: 24 tests passed.
 - Ruff, compileall, dependency checks, sdist, wheel, and wheel-install smoke
   tests passed.
+- GitHub Actions passed Linux Python 3.10/3.11/3.12, Windows Python 3.12, and
+  Docker build/run smoke jobs.
 - CPO-LED archive SHA-256 verified.
 - Full packed-array SHA-256 recorded in `RELEASE_ARTIFACTS.md`.
 
 ## Known limitations
 
-- The Docker/OCI build is configured for CI but has not run on the current
-  Windows host.
-- Linux and Windows GitHub Actions runs require a valid remote repository.
+- A local Docker engine is unavailable; the ephemeral CI container passed but
+  an immutable signed image digest has not yet been recorded.
 - Zenodo DOIs and the Pattern Recognition final citation remain pending.
 - The Software Impacts draft is not submission-ready until its DOI and
   publication-status fields are updated.

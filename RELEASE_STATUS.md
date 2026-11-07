@@ -40,12 +40,11 @@ external publication performed.
 - The Software Impacts working draft contains a 90-word abstract, six keywords,
   C1-C9 metadata, impact and limitations sections, and five reference entries.
 - The working manuscript renders cleanly as a two-page A4 DOCX/PDF.
+- GitHub Actions passed on Linux Python 3.10, 3.11, and 3.12, Windows Python
+  3.12, and an ephemeral Docker build/run smoke test.
 
 ## Open release gates
 
-- Build and verify Docker/OCI images; Docker is not installed on the current
-  host.
-- Run the repository CI workflow on Linux and Windows.
 - Mint and record software and dataset DOIs.
 - Apply and publish the CPO-LED Bench v2.0.1 metadata correction.
 - Replace pending DOI and publication-status text in the manuscript after

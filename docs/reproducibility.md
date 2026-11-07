@@ -16,10 +16,10 @@
 - A fresh environment resolved from `uv.lock` reproduces all 24 tests.
 - All 5,010 public windows are reconstructed from the image release.
 - Ruff, compile checks, dependency checks, and package builds pass.
+- GitHub Actions passes Linux Python 3.10-3.12, Windows, and Docker smoke jobs.
 
 ## Release gates still open
 
-- Verify the optional PyTorch path through remote Linux and Windows CI.
 - Build and record an immutable container digest.
 - Compare a frozen quickstart output against an archived expected result.
 - Mint a software version DOI and a dataset DOI.

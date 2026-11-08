@@ -6,7 +6,12 @@ version: "1.0.0-rc.1"
 date-released: 2026-11-07
 license: AGPL-3.0-only
 repository-code: "https://github.com/wwlswj/CPO-STCM"
-url: "https://github.com/wwlswj/CPO-STCM"
+url: "https://doi.org/10.5281/zenodo.24031262"
+doi: "10.5281/zenodo.24031262"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24031261"
+    description: "Concept DOI for all versions of CPO-STCM"
 abstract: >-
   CPO-STCM is research software for normal-only anomaly detection in
   LED-screen animations. It combines temporal reconstruction, partially

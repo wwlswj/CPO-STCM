@@ -24,5 +24,6 @@ The original `CPO-STCM` directory was not modified. Dataset archives, model
 weights, experiment outputs, the Pattern Recognition manuscript, and the
 literature corpus were excluded from this repository.
 
-A complete file-hash manifest and the final clean-environment run record will
-be added to the immutable release capsule before DOI minting.
+The released capsule contains the source distributions and SHA-256 manifest.
+Clean-environment test outcomes and the public CI record are documented in
+`RELEASE_STATUS.md`.

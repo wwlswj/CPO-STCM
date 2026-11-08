@@ -1,6 +1,6 @@
 # Release status
 
-Date: 2026-11-07
+Date: 2026-11-08
 
 Version: `1.0.0-rc.1`
 
@@ -45,17 +45,25 @@ Repository state: public GitHub repository with a published prerelease:
 - The working manuscript renders cleanly as a two-page A4 DOCX/PDF.
 - GitHub Actions passed on Linux Python 3.10, 3.11, and 3.12, Windows Python
   3.12, and an ephemeral Docker build/run smoke test.
+- Software and dataset Zenodo records are published with registered version
+  and concept DOIs.
+- DOI landing links resolve to the expected public Zenodo records.
 
 ## Open release gates
 
-- Publish Zenodo drafts and register the reserved software and dataset DOIs.
-- Merge and publish the CPO-LED Bench v2.0.1 metadata correction after DOI
-  minting.
-- Replace pending DOI and publication-status text in the manuscript after
-  acceptance and archival release.
+- Merge and publish the CPO-LED Bench v2.0.1 metadata correction now that its
+  DOI is registered.
+- Replace the remaining Pattern Recognition acceptance and citation text after
+  that manuscript reaches final publication status.
 - Perform the final live Guide for Authors and submission-system check.
+- Decide whether to archive a separate stable `v1.0.0` software release. The
+  current public archive and manuscript use the `v1.0.0-rc.1` version DOI.
 
-Prepared but unpublished Zenodo drafts:
+Published Zenodo records:
 
-- Software: https://zenodo.org/deposit/24031262
-- Dataset: https://zenodo.org/deposit/24031281
+- Software record: https://zenodo.org/records/24031262
+- Software version DOI: `10.5281/zenodo.24031262`
+- Software concept DOI: `10.5281/zenodo.24031261`
+- Dataset record: https://zenodo.org/records/24031281
+- Dataset version DOI: `10.5281/zenodo.24031281`
+- Dataset concept DOI: `10.5281/zenodo.24031280`

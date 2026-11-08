@@ -3,6 +3,7 @@
 ## Current evidence
 
 - The CPO-LED v2.0 image archive is size- and SHA-256-pinned.
+- The software and dataset are archived under registered version DOIs.
 - Dataset extraction rejects absolute and parent-traversing ZIP members.
 - The packed array is generated deterministically from indexed PNG windows.
 - Model-free tests and the offline demo do not require network access.
@@ -22,11 +23,21 @@
 
 - Build and record an immutable container digest.
 - Compare a frozen quickstart output against an archived expected result.
-- Mint a software version DOI and a dataset DOI.
+
+## Pinned archival identifiers
+
+- Software `1.0.0-rc.1` version DOI:
+  [10.5281/zenodo.24031262](https://doi.org/10.5281/zenodo.24031262)
+- Software concept DOI:
+  [10.5281/zenodo.24031261](https://doi.org/10.5281/zenodo.24031261)
+- CPO-LED Bench `2.0.1` version DOI:
+  [10.5281/zenodo.24031281](https://doi.org/10.5281/zenodo.24031281)
+- CPO-LED Bench concept DOI:
+  [10.5281/zenodo.24031280](https://doi.org/10.5281/zenodo.24031280)
 
 ## Reproducing a released result
 
-The intended publication flow is:
+The released workflow is:
 
 ```bash
 cpo-stcm data fetch

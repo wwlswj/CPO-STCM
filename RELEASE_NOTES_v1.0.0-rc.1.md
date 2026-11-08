@@ -31,6 +31,17 @@ distribution.
 
 - A local Docker engine is unavailable; the ephemeral CI container passed but
   an immutable signed image digest has not yet been recorded.
-- Zenodo DOIs and the Pattern Recognition final citation remain pending.
-- The Software Impacts draft is not submission-ready until its DOI and
-  publication-status fields are updated.
+- At the time of RC tagging, Zenodo DOIs and the Pattern Recognition final
+  citation remained pending.
+- The Software Impacts draft is not submission-ready until the Pattern
+  Recognition acceptance details are available.
+
+## Post-publication status
+
+- Software version DOI: `10.5281/zenodo.24031262`
+- Software concept DOI: `10.5281/zenodo.24031261`
+- Dataset version DOI: `10.5281/zenodo.24031281`
+- Dataset concept DOI: `10.5281/zenodo.24031280`
+
+The DOI fields in the current repository documentation and working manuscript
+have been updated. The tag and Release assets remain unchanged.

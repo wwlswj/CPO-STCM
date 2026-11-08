@@ -4,11 +4,11 @@
 
 - Confirm the Pattern Recognition manuscript is accepted or published and
   replace its working citation with the final journal DOI.
-- Mint the software v1.0.0 version DOI and insert it into C2 and the software
-  reference.
-- Mint the dataset v2.0.1 DOI and insert it into the dataset reference.
-- Replace the reproducibility-capsule pending statement with the final
-  permanent link and container digest.
+- Confirm the published software `v1.0.0-rc.1` and dataset `v2.0.1` DOI links
+  resolve. If a stable `v1.0.0` is released before submission, decide whether
+  to update C1, C3, and the software reference to its new version DOI.
+- Confirm the reproducibility capsule and available release artifacts resolve;
+  add the immutable container digest if one is published before submission.
 - Confirm the public GitHub repository, documentation links, and release assets
   resolve from a signed-out browser.
 - Recheck the current Software Impacts Guide for Authors and article template
@@ -27,3 +27,5 @@
 - Ruff, compile checks, build checks, and dependency checks passed.
 - Full public image packing: 5,010 windows and 2,196,600,128 bytes.
 - Dataset archive hash and extracted shape verified.
+- Software DOI `10.5281/zenodo.24031262` and dataset DOI
+  `10.5281/zenodo.24031281` are registered and inserted.

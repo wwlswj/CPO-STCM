@@ -1,7 +1,7 @@
 # Publish commands
 
-Run these only after explicit authorization and successful GitHub/Zenodo
-authentication.
+These commands record the completed public-release workflow. Do not rerun tag
+or Release creation commands against existing immutable assets.
 
 ## GitHub RC
 
@@ -38,15 +38,15 @@ From the local CPO-LED Bench clone:
 git push origin metadata/v2.0.1
 ```
 
-Do not create the final data tag or Release until the Zenodo DOI and final
-metadata review are complete.
+The dataset Zenodo DOI and metadata review were completed on 2026-11-08. Create
+the `v2.0.1` tag and Release only after the metadata PR is merged.
 
-## Zenodo
+## Zenodo completed steps
 
-1. Authenticate to Zenodo with the account that should own both records.
-2. Create the software deposit from the tagged GHCR/source release.
-3. Upload the full CPO-LED Bench v2.0.0 archive and corrected v2.0.1 metadata
-   as a separate dataset deposit.
-4. Mint version and concept DOIs.
-5. Update `CITATION.cff`, the Software Impacts manuscript, and the dataset
-   citation with the final DOI values.
+1. Authenticated to Zenodo with the record owner account.
+2. Created and published the software record from the RC release.
+3. Uploaded the full CPO-LED Bench v2.0.0 archive and corrected v2.0.1 metadata
+   as a separate dataset record.
+4. Registered version and concept DOIs for both records.
+5. Updated citation metadata, the Software Impacts manuscript, and release
+   documentation with the final DOI values.

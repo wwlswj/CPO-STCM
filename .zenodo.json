@@ -28,6 +28,12 @@
       "identifier": "https://github.com/wwlswj/CPO-STCM",
       "relation": "isSupplementTo",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.24031281",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "dataset"
     }
   ]
 }

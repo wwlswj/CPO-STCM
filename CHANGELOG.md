@@ -27,8 +27,6 @@ versioning after the first stable release.
 
 ### Known limitations
 
-- A clean Python 3.12 installation and complete PyTorch test suite remain to be
-  verified in CI.
 - Full static-detector recomputation requires original raw LED frames; frozen
   public static evidence is supplied through CPO-LED Bench.
 - The dependency lock and container digests are release gates that remain open.

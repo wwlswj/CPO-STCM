@@ -333,7 +333,7 @@ def build(data_path: Path, output_path: Path) -> None:
         add_paragraphs(document, section_data["paragraphs"])
 
     references_heading = document.add_paragraph(style="Heading 1")
-    references_heading.paragraph_format.space_before = Pt(8)
+    references_heading.paragraph_format.space_before = Pt(5)
     references_heading.paragraph_format.space_after = Pt(3)
     references_heading.paragraph_format.keep_with_next = True
     set_font(references_heading.add_run("References"), 11, bold=True)
@@ -341,19 +341,19 @@ def build(data_path: Path, output_path: Path) -> None:
         paragraph = document.add_paragraph()
         paragraph.paragraph_format.left_indent = Cm(0.5)
         paragraph.paragraph_format.first_line_indent = Cm(-0.5)
-        paragraph.paragraph_format.space_after = Pt(1.2)
-        paragraph.paragraph_format.line_spacing = 0.95
+        paragraph.paragraph_format.space_after = Pt(0.8)
+        paragraph.paragraph_format.line_spacing = 0.90
         text = reference
         match = re.search(r"https?://[^\s]+", text)
         if match is not None:
             url = match.group(0).rstrip(".,;")
             before = text[:match.start()]
             after = text[match.start() + len(url):]
-            set_font(paragraph.add_run(before), 7.5)
-            add_hyperlink(paragraph, url, url, size=7.5)
-            set_font(paragraph.add_run(after), 7.5)
+            set_font(paragraph.add_run(before), 7.2)
+            add_hyperlink(paragraph, url, url, size=7.2)
+            set_font(paragraph.add_run(after), 7.2)
         else:
-            set_font(paragraph.add_run(text), 7.5)
+            set_font(paragraph.add_run(text), 7.2)
 
     footer = section.footer
     footer_paragraph = footer.paragraphs[0]

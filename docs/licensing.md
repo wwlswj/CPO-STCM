@@ -14,8 +14,8 @@ CPO-LED Bench owner-provided images, annotations, splits, manifests, and derived
 evidence are licensed separately under `CC-BY-4.0`. The dataset license does not
 apply to source code.
 
-The intended `v2.0.1` dataset release changes citation metadata and adds a DOI;
-it does not relicense or alter the v2.0.0 data payload.
+The published `v2.0.1` dataset release changes citation metadata and adds a
+DOI; it does not relicense or alter the v2.0.0 data payload.
 
 ## Ultralytics
 

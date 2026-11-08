@@ -47,7 +47,7 @@
     {
       "id": "C3",
       "label": "Permanent link to Reproducible Capsule",
-      "value": "Zenodo capsule DOI to be assigned at archival release"
+      "value": "https://doi.org/10.5281/zenodo.24031262"
     },
     {
       "id": "C4",
@@ -99,9 +99,9 @@
     {
       "heading": "Reproducibility and validation",
       "paragraphs": [
-        "CPO-LED Bench v2.0 is a public image-inclusive benchmark containing 70,140 image files, 5,010 spatial base windows, 13,802 expanded temporal windows, and 222 production-derived natural anomalies [3]. The v2.0.0 archive remains immutable. A v2.0.1 metadata revision corrects the dataset author order and will add a persistent DOI without changing image, annotation, split, model, or archive content.",
+        "CPO-LED Bench v2.0 is a public image-inclusive benchmark containing 70,140 image files, 5,010 spatial base windows, 13,802 expanded temporal windows, and 222 production-derived natural anomalies [3]. The v2.0.0 archive remains immutable. The v2.0.1 metadata revision corrects the dataset author order and is archived under a persistent DOI without changing image, annotation, split, model, or archive content.",
         "The software was tested in independent Python 3.12.10 environments without system site packages. The base suite passed 24 tests with three optional PyTorch tests skipped; the CPU ML suite passed all 24 tests with PyTorch 2.15.0+cpu. Ruff, compile checks, dependency checks, source-distribution and wheel builds passed. A locked environment generated from uv.lock reproduced the full 24-test result. Packing all published dynamic images produced an array of shape 7322 x 10 x 100 x 300, containing 5,010 valid windows in 2,196,600,128 bytes with SHA-256 58e84979e4c10e925c0577e592293730f486108a67c2693882dfa29f3f66e02b.",
-        "The current release candidate is not yet published. The final v1.0.0 release will bind the Git tag, wheel and source archive, container digest, and Zenodo version DOI. The software paper should be submitted only after those links are live and the Pattern Recognition paper cited in the enabled-publications list has reached its final publication status."
+        "The v1.0.0-rc.1 software release is archived under the version DOI 10.5281/zenodo.24031262 and the concept DOI 10.5281/zenodo.24031261. The record binds the Git tag, wheel, source archive, release notes, and SHA-256 manifest. The software paper should be submitted only after the Pattern Recognition paper cited in the enabled-publications list has reached its final publication status."
       ]
     },
     {
@@ -110,7 +110,7 @@
         "CPO-STCM enables research questions that require joint analysis of temporal order and partial visibility. Investigators can replace a detector, calibrate normal-only alarm budgets, isolate source sequences, and compare reconstruction, order, semantic-layout, and fused evidence in one reproducible pipeline.",
         "The software also improves existing practice. A user does not need to reconstruct repository-specific paths, infer manifest semantics from filenames, or manually coordinate plotting and evaluation scripts. The public data checksum, image-to-array conversion, explicit workflow arguments, and frozen JSON reports reduce opportunities for silent protocol drift. Researchers can reuse the package as a command-line tool, import calibration and evaluation functions as a library, or adapt the workflow modules to another animation domain.",
         "The demonstrated technical impact is the measured capability of the accompanying method. At a nominal 5% alarm budget, the charge branch obtained AUROC 0.927 and F1 0.870 on mixed data; observability-aware calibration increased F1 to 0.873 and reduced the partial-observation false-positive rate from 0.117 to 0.078. Production-derived anomalies reached AUROC 0.993 and F1 0.972 [2]. These values demonstrate software-mediated analysis; they are not evidence of external adoption.",
-        "External uptake, community reuse, and commercial deployment have not yet been measured. The open repository, dataset DOI, software DOI, executable examples, and documented workflow are intended to make such evaluation possible after publication."
+        "External uptake, community reuse, and commercial deployment have not yet been measured. The open repository, dataset DOI, software DOI, executable examples, and documented workflow provide a citable basis for such evaluation."
       ]
     },
     {
@@ -124,15 +124,15 @@
     {
       "heading": "Scholarly publications enabled by the software",
       "paragraphs": [
-        "The software directly supports: W. Wang, H. Chen, and X. Wei, Partially Observed Weighted Isotonic Conformal Consistency for Normal-Only Animation Anomaly Detection, Pattern Recognition, manuscript under review [2]. Its journal citation and DOI must be inserted here after acceptance. No other publication enabled by this software is claimed at the time of this working draft."
+        "The software directly supports: W. Wang, H. Chen, and X. Wei, Partially Observed Weighted Isotonic Conformal Consistency for Normal-Only Animation Anomaly Detection, Pattern Recognition, manuscript under review [2]. Its journal citation and DOI should be inserted after acceptance. No other enabled publication is claimed at this stage."
       ]
     }
   ],
   "references": [
     "[1] V. Vovk, A. Gammerman, and G. Shafer, Algorithmic Learning in a Random World. Springer, 2005. doi:10.1007/b106715.",
     "[2] W. Wang, H. Chen, and X. Wei, Partially Observed Weighted Isotonic Conformal Consistency for Normal-Only Animation Anomaly Detection, Pattern Recognition, manuscript under review.",
-    "[3] W. Wang, H. Chen, and X. Wei, CPO-LED Bench v2.0.1, dataset, 2026. DOI pending archival release. https://github.com/wwlswj/CPO-LED-Bench",
-    "[4] X. Su and W. Wang, CPO-STCM v1.0.0-rc.1, software, 2026. DOI pending archival release. https://github.com/wwlswj/CPO-STCM",
+    "[3] W. Wang, H. Chen, and X. Wei, CPO-LED Bench v2.0.1, dataset, 2026. https://doi.org/10.5281/zenodo.24031281",
+    "[4] X. Su and W. Wang, CPO-STCM v1.0.0-rc.1, software, 2026. https://doi.org/10.5281/zenodo.24031262",
     "[5] Ultralytics, YOLO licenses and AGPL-3.0 terms. https://www.ultralytics.com/license (accessed 7 November 2026)."
   ]
 }

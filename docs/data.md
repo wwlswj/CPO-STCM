@@ -7,6 +7,9 @@ data release is separate from this software repository:
 
 `https://github.com/wwlswj/CPO-LED-Bench/releases/tag/v2.0.0`
 
+The Zenodo record for citation version `v2.0.1` is
+`https://doi.org/10.5281/zenodo.24031281`.
+
 Pinned properties:
 
 | Property | Value |
@@ -38,7 +41,9 @@ Use `--limit 2` for a fast smoke test against real dataset images.
 
 The data payload remains `v2.0.0`. A separate `v2.0.1` metadata correction adds
 the confirmed citation order Wanli Wang, Huafeng Chen, Xian Wei and a persistent
-dataset DOI without changing the image payload or its SHA-256.
+dataset DOI without changing the image payload or its SHA-256. The version DOI
+is `10.5281/zenodo.24031281`; the concept DOI is
+`10.5281/zenodo.24031280`.
 
 ## Original raw frames
 

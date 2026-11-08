@@ -12,12 +12,19 @@ Recorded: 2026-11-07
 The authoritative hashes for source archives and release-asset copies are in
 `dist/SHA256SUMS.txt`, generated after the final tag.
 
+## Archival identifiers
+
+| Object | Version DOI | Concept DOI |
+|---|---|---|
+| CPO-STCM `1.0.0-rc.1` | `10.5281/zenodo.24031262` | `10.5281/zenodo.24031261` |
+| CPO-LED Bench `2.0.1` | `10.5281/zenodo.24031281` | `10.5281/zenodo.24031280` |
+
 ## Software Impacts working draft
 
 | Artifact | Bytes | SHA-256 |
 |---|---:|---|
-| `CPO-STCM_SoftwareImpacts_Working_Draft.docx` | 43059 | `f7d5d7c5d7edf3029ed2b05f76a094745e0c817b3fd8feb0d5ad52d954c27d63` |
-| `CPO-STCM_SoftwareImpacts_Working_Draft.pdf` | 242354 | `9cce6ef8a6b7e4a53873d975e6274ea13b6dec1f4e082f13cbbe6e069742309d` |
+| `CPO-STCM_SoftwareImpacts_Working_Draft.docx` | 43002 | `609fa35cd798247b1b4a4f7d41db2b81c28aaf518f609d142ac131160ea3d740` |
+| `CPO-STCM_SoftwareImpacts_Working_Draft.pdf` | 267965 | `4a71611cdadde2ee54b35c3dd26f571afcb58448e3edf358936f5b83822eb980` |
 
 ## Data products
 
@@ -36,4 +43,6 @@ The authoritative hashes for source archives and release-asset copies are in
   smoke jobs passed.
 - Data metadata review PR: `https://github.com/wwlswj/CPO-LED-Bench/pull/1`.
 - Existing v2.0.0 data tag: unchanged.
-- No Zenodo record, DOI, or journal submission has been created.
+- Software Zenodo record: `https://zenodo.org/records/24031262`.
+- Dataset Zenodo record: `https://zenodo.org/records/24031281`.
+- No journal submission has been created.

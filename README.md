@@ -6,8 +6,8 @@ semantic-slot consistency, and block-aware conformal calibration.
 
 This repository is the independent software distribution intended for the
 planned *Software Impacts* Original Software Publication. It is currently a
-`1.0.0rc1` release candidate and has not yet been published to GitHub, Zenodo,
-or the journal.
+public `1.0.0rc1` release candidate. The GitHub release and Zenodo archival
+record are live; the journal manuscript has not been submitted.
 
 ## What the software provides
 
@@ -17,8 +17,8 @@ or the journal.
 - A command-line interface for diagnostics, data verification, packing, and
   training/evaluation workflows.
 - Validated access to the public CPO-LED Bench v2.0 data payload.
-- Reproducibility hooks for locked environments, immutable assets, and future
-  Zenodo DOIs.
+- Reproducibility hooks for locked environments, immutable assets, and
+  persistent software and dataset DOIs.
 
 ## Install
 
@@ -60,12 +60,17 @@ uv run --frozen cpo-stcm config show
 
 ## Use CPO-LED Bench
 
-The public archive is pinned to version `2.0.0`, size `395563944` bytes, and
-SHA-256:
+The public data payload is version `2.0.0`, with citation metadata version
+`2.0.1`. The payload is 395563944 bytes with SHA-256:
 
 ```text
 a462f4c144b4675aaeb7ccdc819066653fd9500615843996f941226c05a3b19d
 ```
+
+The dataset is archived on Zenodo under the version DOI
+[10.5281/zenodo.24031281](https://doi.org/10.5281/zenodo.24031281).
+The version-independent concept DOI is
+[10.5281/zenodo.24031280](https://doi.org/10.5281/zenodo.24031280).
 
 Download, validate, and extract it:
 
@@ -126,8 +131,30 @@ Software is licensed under `AGPL-3.0-only`. CPO-LED Bench data remains under
 `CC-BY-4.0`; the two licenses apply to different artifacts. Optional
 Ultralytics integration remains subject to Ultralytics licensing terms.
 
-Citation metadata is provided in `CITATION.cff`. Until the archival DOI is
-minted, cite the versioned source repository rather than an unversioned branch.
+Citation metadata is provided in `CITATION.cff`. Cite one of the archived
+versions below rather than an unversioned branch.
+
+- Software version DOI:
+  [10.5281/zenodo.24031262](https://doi.org/10.5281/zenodo.24031262)
+- Software concept DOI:
+  [10.5281/zenodo.24031261](https://doi.org/10.5281/zenodo.24031261)
+- CPO-LED Bench version DOI:
+  [10.5281/zenodo.24031281](https://doi.org/10.5281/zenodo.24031281)
+- CPO-LED Bench concept DOI:
+  [10.5281/zenodo.24031280](https://doi.org/10.5281/zenodo.24031280)
+
+Recommended citation:
+
+```bibtex
+@software{su2026cpostcm,
+  author  = {Su, Xiaoxue and Wang, Wanli},
+  title   = {{CPO-STCM}},
+  version = {1.0.0-rc.1},
+  year    = {2026},
+  doi     = {10.5281/zenodo.24031262},
+  url     = {https://doi.org/10.5281/zenodo.24031262}
+}
+```
 
 ## Support
 

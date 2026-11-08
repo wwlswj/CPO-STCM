@@ -38,8 +38,8 @@ From the local CPO-LED Bench clone:
 git push origin metadata/v2.0.1
 ```
 
-The dataset Zenodo DOI and metadata review were completed on 2026-11-08. Create
-the `v2.0.1` tag and Release only after the metadata PR is merged.
+The dataset Zenodo DOI, metadata PR, `v2.0.1` tag, and metadata-only Release
+were completed on 2026-11-08.
 
 ## Zenodo completed steps
 

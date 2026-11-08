@@ -40,6 +40,8 @@ Repository state: public GitHub repository with a published prerelease:
 - Data pull request https://github.com/wwlswj/CPO-LED-Bench/pull/1 prepares the
   v2.0.1 citation correction while leaving the v2.0.0 tag and archive
   unchanged.
+- Data PR #1 is merged, and the metadata-only v2.0.1 tag and Release are
+  published.
 - The Software Impacts working draft contains a 90-word abstract, six keywords,
   C1-C9 metadata, impact and limitations sections, and five reference entries.
 - The working manuscript renders cleanly as a two-page A4 DOCX/PDF.
@@ -51,8 +53,6 @@ Repository state: public GitHub repository with a published prerelease:
 
 ## Open release gates
 
-- Merge and publish the CPO-LED Bench v2.0.1 metadata correction now that its
-  DOI is registered.
 - Replace the remaining Pattern Recognition acceptance and citation text after
   that manuscript reaches final publication status.
 - Perform the final live Guide for Authors and submission-system check.

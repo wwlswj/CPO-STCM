@@ -41,8 +41,11 @@ The authoritative hashes for source archives and release-asset copies are in
   `https://github.com/wwlswj/CPO-STCM/releases/tag/v1.0.0-rc.1`.
 - GitHub Actions: Linux Python 3.10-3.12, Windows Python 3.12, and Docker
   smoke jobs passed.
-- Data metadata review PR: `https://github.com/wwlswj/CPO-LED-Bench/pull/1`.
-- Existing v2.0.0 data tag: unchanged.
+- Data metadata review PR: `https://github.com/wwlswj/CPO-LED-Bench/pull/1`
+  (merged).
+- Data metadata-only Release:
+  `https://github.com/wwlswj/CPO-LED-Bench/releases/tag/v2.0.1`.
+- Existing v2.0.0 data tag and full archive: unchanged.
 - Software Zenodo record: `https://zenodo.org/records/24031262`.
 - Dataset Zenodo record: `https://zenodo.org/records/24031281`.
 - No journal submission has been created.
